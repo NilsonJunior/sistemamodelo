@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="iso-8859-1">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery.js" lang="JavaScript" type="text/javascript"></script>
+        <script src="js/funcoes.js" lang="JavaScript" type="text/javascript"></script>
+        <link href="css/style.css" rel="stylesheet">
+        <title>Cadastro</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+	<ul class="nav nav-tabs">
+	  <li role="presentation" class="active"><a href="#">Home</a></li>
+	</ul>
+        <div id="principal">
+            <div id="esquerda">
+                <fieldset class="box">
+                    <legend>Usuarios Cadastrados</legend>
+                    <div style="height: 543px; overflow: scroll">
+                        <table id="cadastro" width="100%" align="center">
+                            <tr style="background-color:black;">
+                                <td style="color: white">Nome</td>
+                                <td style="color: white">SobreNome</td>
+                                <td style="color: white">Endereço</td>
+                                <td style="color: white">Opção</td>
+                            </tr>
+                        </table>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="direita">
+                <fieldset class="box">
+                    <legend>Cadastrar e Editar Usuarios</legend>
+                    <table width="80%" border="0" align="center" style="margin-top: 25%;">
+                        <tr style="display: none;">
+                            <td width="69">id:</td>
+                            <td width="546"><input name="id" type="text" id="id" size="70" maxlength="10" />
+                                <span class="style1">*</span></td>
+                        </tr>
+                        <tr style="">
+                            <td width="35%" align="right">Nome:</td>
+                            <td width="65%"><input name="nome" type="text" id="nome" size="20" maxlength="60" />
+                                <span class="style1">*</span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Sobre Nome:</td>
+                            <td><input name="sobrenome" type="text" id="sobrenome" size="20" maxlength="70" />
+                                <span class="style1">*</span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Endereço:</td>
+                            <td><input name="endereco" type="text" id="endereco" size="20" maxlength="70" />
+                                <span class="style1">*</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><p>
+                                    <input name="cadastrar" style="cursor: pointer" type="button" id="cadastrar" onclick="inserir()" value="Gravar" />
+
+                                    <input name="limpar" style="cursor: pointer" type="button" id="limpar" onclick="limpar()" value="Limpar" />
+
+                                    <input name="delete" style="cursor: pointer" type="button" id="delete" value="Apagar" />
+                                    </br>
+                                    <span class="style1">* Campos com * são obrigatórios!          </span></p>
+                                <p>  </p></td>
+                        </tr>
+                    </table>
+                </fieldset>
+				
+            </div>
+        </div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

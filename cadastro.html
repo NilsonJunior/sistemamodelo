@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="iso-8859-1">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery.js" lang="JavaScript" type="text/javascript"></script>
+        <script src="js/funcoes.js" lang="JavaScript" type="text/javascript"></script>
+        <link href="css/cadastro.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <title>Cadastro</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--Menu : Inicio-->
+    	<ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="index.html">Sair</a></li>
+    	</ul>
+        <!--Menu : Fim-->
+        <!--Tela Maior :Inicio -->
+        <div id="login-overlay" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Sistema Modelo | Cadastro de usuários</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="well">
+                                <legend>Usuários Cadastrados</legend>
+                                <div style="height: 543px; overflow: scroll">
+                                    <table id="cadastro" width="100%" align="center">
+                                        <tr style="background-color:black;">
+                                            <td style="color: white">Nome</td>
+                                            <td style="color: white">SobreNome</td>
+                                            <td style="color: white">Endereço</td>
+                                            <td style="color: white">Opção</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">  
+                            <legend>Cadastrar e Editar Usuários</legend>
+                            <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                                <div style="display: none;" class="form-group">
+                                    <input type="text" class="form-control" id="id" name="id" value=""  size="20" maxlength="60" required="" title="Por favor preencher com o primeiro nome" placeholder="primeiro nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="control-label">Nome: *</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" value=""  size="20" maxlength="60" required="" title="Por favor preencher com o primeiro nome" placeholder="primeiro nome">
+                                    <span class="help-block"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="control-label">Sobrenome: *</label>
+                                    <input type="text" class="form-control" id="sobrenome" name="sobrenome" value="" id="sobrenome" size="20" maxlength="70" required="" title="Por favor preencher com o sobrenome" placeholder="sobrenome">
+                                    <span class="help-block"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="control-label">Endereço: *</label>
+                                    <input type="text" class="form-control" id="endereco" name="endereco" value=""  id="endereco" size="20" maxlength="70" required="" title="Por favor preencher com o endereço completo" placeholder="endereço completo">
+                                    <span class="help-block"></span>
+                                </div>
+                                <button  type="button" class="btn btn-success " name="cadastrar" style="cursor: pointer"  id="cadastrar" onclick="inserir()" value="Gravar">Gravar</button>
+                                <button type="button"  class="btn  " name="limpar" style="cursor: pointer" type="button" id="limpar" onclick="limparIn()" value="Limpar">Limpar</button>
+                                <button type="button"  class="btn  btn-danger" name="delete" style="cursor: pointer" type="button" id="delete" value="Apagar">Deletar</button>
+                                </br></br>
+                                <span>Campos com * são obrigatórios!          </span></p>
+                            </form>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>                 
+    </body>                   
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
